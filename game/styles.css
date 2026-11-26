@@ -1,0 +1,42 @@
+/* Kestrel Ridge — Alpine Courier: page chrome. The game itself draws
+   everything on the canvas, so this file only frames it full-screen. */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b1622;
+  overflow: hidden;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120% 100% at 50% 0%, #16283c 0%, #0b1622 70%);
+}
+
+#game {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+  background: #0b1622;
+}
+
+#fallback[hidden] {
+  display: none;
+}
+
+#fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cfe3f2;
+  font: 16px/1.5 system-ui, sans-serif;
+  text-align: center;
+  padding: 24px;
+}
